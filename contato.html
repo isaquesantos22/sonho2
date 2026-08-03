@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+    	<title>Meus Sonhos</title>
+    	<meta charset="UTF-8">
+		<link rel ="icon" href="sonho1.jpg">
+    	<link href ="style4.css" rel="stylesheet" type="text/css">
+		<script language="javascript" type="text/javascript">
+			function validar(){
+				var nom = form1.nome.value;
+				var not = form1.nota.value;
+				
+				if(nom==""){
+					alert('por favor, preecha o seu nome')
+					form1.nome.focus();
+					return false;
+				}
+				if(not==""){
+					alert('por favor preencha o campo da nota')
+					form1.nota.focus();
+					return false;
+				}	
+					return true;
+				}
+			function processarform(){
+				if(validar()){
+				alert('dados enviados com sucesso');
+				reset.form1;
+				}
+				return false;
+			
+			}
+		</script>
+	</head>
+	<body>
+		<nav id="menu">
+			<ul>
+				<li><a href="sonho.html">Sonho</a></li>
+				<li><a href="hoje.html">Hoje</a></li>
+				<li><a href="futuro.html">Futuro</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+		</nav>
+		<div class="title">
+			Deixe Sua Avaliação
+		</div>
+		<div class="avaliacao">
+		<form name="form1" onsubmit="return processarform()" method="post">
+				Nome:<input type="text" name="nome" size="20" maxlength="50"><br><br>
+				Nota:<select name="nota">
+						<option></option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+				<br><br>
+				Sugestão:<textarea rows="15" cols="15"></textarea><br><br>
+				<input type= "submit" value="enviar" onclick="return validar()">
+				<input type= "reset" value="limpar">
+		</form>
+		</div>
+		<hr>
+		<div class="rodape">
+		<center>
+			<div align="right"><a href="#"></a></div>
+		    <div align="right"><a href="#"><img src="seta.png" width="28"></a></div>
+			<h5>Isaque Kasbar Santos 2026 - &copy;Todos os direitos reservados<br>
+			Trabalho acadêmico sem fins lucrativos.</h5>
+		</center>
+		</div>
+	</body>
+</html>
